@@ -13,7 +13,7 @@ function App() {
     salary: "",
   });
 
-  const API_URL = "http://localhost:5100/employees";
+  const API_URL = "https://ems2-fys0.onrender.com/employees";
 
   // FETCH EMPLOYEES
   const getEmployees = async () => {
