@@ -13,7 +13,7 @@ function App() {
     salary: "",
   });
 
-  const API_URL = "https://ems2-fys0.onrender.com/employees";
+  const API_URL = "http://localhost:5100/employees";
 
   // FETCH EMPLOYEES
   const getEmployees = async () => {
@@ -58,7 +58,7 @@ function App() {
 
   // START EDITING
   const startEdit = (employee) => {
-    setEditingId(employee.id);
+    setEditingId(employee._id);
     setFormData({
       name: employee.name,
       department: employee.department,
@@ -194,7 +194,7 @@ function App() {
                 <button className="edit-btn" onClick={() => startEdit(employee)}>
                   Edit
                 </button>
-                <button className="delete-btn" onClick={() => deleteEmployee(employee.id)}>
+                <button className="delete-btn" onClick={() => deleteEmployee(employee._id)}>
                   Delete
                 </button>
               </div>
